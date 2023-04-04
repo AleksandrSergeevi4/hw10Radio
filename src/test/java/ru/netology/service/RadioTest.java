@@ -19,6 +19,19 @@ public class RadioTest {
     }
 
     @Test
+    public void newSetStationNumber() {
+        Radio setStation = new Radio(31);
+        int setNumber = 30;
+
+        setStation.setCurrentStationNumber(setNumber);
+
+        int expected = 30;
+        int actual = setStation.getCurrentStationNumber();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void setPrevStation() {
         Radio prevStation = new Radio();
 
